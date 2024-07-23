@@ -1,0 +1,9 @@
+<div th:fragment="navbar(text,bt)">
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <a th:if="${text == 'List'}" class="btn btn-md btn-secondary" th:href="@{/}" >Back to home</a>
+            <a th:if="${text == 'Home' or text == 'Register'}" class="navbar-brand" th:href="@{/}" >Java 8 Test</a>
+            <a th:if="${bt==1}" th:href="@{/register}" class="btn btn-md btn-success" >Add</a>
+        </div>
+    </nav>
+</div>
